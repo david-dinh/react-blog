@@ -7,11 +7,15 @@ const Home = () => {
         {name: 'Commander\'s Palace', stars: 5, price: 4, location: 'Garden District', id: 2},
         {name: 'Oceana Grill', stars: 4, price: 2, location: 'French Quarter', id: 3}
     ]);
+
+    const handleDelete = (id) => {
+        const newBlogs = blogs.filter(blog => blog.id !== id)
+        setBlogs(newBlogs)
+    }
     
     return (
         <div className="home">
-            <BlogList entries={blogs} title="All Restaurants"/>
-            <BlogList entries={blogs.filter((blogs) => blogs.location === 'French Quarter')} title="French Quarter Restaurants"/>
+            <BlogList entries={blogs} title="All Restaurants" handleDelete={handleDelete}/>
         </div>
     );
 }
