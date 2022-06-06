@@ -1,25 +1,39 @@
 {
-    "blogs": [
-        {
-            "name": "Mambo's",
-            "stars": 4,
-            "price": 2, 
-            "location": "French Quarter",
-            "id": 1
-        },
-        {
-            "name": "Commander's Palace", 
-            "stars": 5, 
-            "price": 4, 
-            "location": "Garden District", 
-            "id": 2
-        },
-        {
-            "name": "Oceana Grill", 
-            "stars": 4, 
-            "price": 2, 
-            "location": "French Quarter", 
-            "id": 3
-        }
-    ]
+  "blogs": [
+    {
+      "name": "Mambo's",
+      "stars": 4,
+      "price": 2,
+      "location": "French Quarter",
+      "id": 1
+    },
+    {
+      "name": "Commander's Palace",
+      "stars": 5,
+      "price": 4,
+      "location": "Garden District",
+      "id": 2
+    },
+    {
+      "name": "Oceana Grill",
+      "stars": 4,
+      "price": 2,
+      "location": "French Quarter",
+      "id": 3
+    },
+    {
+      "name": "Manamoo",
+      "starsCount": "5",
+      "priceCount": "3",
+      "location": "South Korea",
+      "id": 4
+    },
+    {
+      "name": "Bill's Oysters",
+      "starsCount": "3",
+      "priceCount": "1",
+      "location": "Italy",
+      "id": 5
+    }
+  ]
 }

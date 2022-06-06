@@ -2,14 +2,31 @@ import { useState } from "react";
 
 const Create = () => {
     const [name, setName] = useState('');
-    const [starsCount, setStarsCount] = useState('1');
-    const [priceCount, setPriceCount] = useState('1');
+    const [stars, setStars] = useState('1');
+    const [price, setPrice] = useState('1');
     const [location, setLocation] = useState('');
+    const [isPending, setIsPending] = useState(false)
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const entry = {name, starsCount: stars, priceCount: price, location};
+
+        setIsPending(true);
+        
+        fetch('http://localhost:8000/blogs', {
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(entry)
+        }).then(() => {
+            console.log('New restaurant added');
+            setIsPending(false);
+        })
+    }
     
     return (
         <div className="create">
             <h2>Add a new Restaurant</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>Restaurant Name:</label>
                 <input
                     type="text"
@@ -19,8 +36,8 @@ const Create = () => {
                 />
                 <label>Stars:</label>
                 <select
-                    value={starsCount}
-                    onChange= {(e) => setStarsCount(e.target.value)}
+                    value={stars}
+                    onChange= {(e) => setStars(e.target.value)}
                 >
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -30,8 +47,8 @@ const Create = () => {
                 </select>
                 <label>Price:</label>
                 <select
-                    value={starsCount}
-                    onChange= {(e) => setPriceCount(e.target.value)}
+                    value={stars}
+                    onChange= {(e) => setPrice(e.target.value)}
                 >
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -46,7 +63,8 @@ const Create = () => {
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
                 />
-                <button>Add Restuarant</button>
+                {!isPending && <button>Add Restuarant</button>}
+                {isPending && <button disabled>Adding Restuarant...</button>}
             </form>
         </div>
     );
