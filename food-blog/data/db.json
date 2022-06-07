@@ -23,17 +23,66 @@
     },
     {
       "name": "Manamoo",
-      "starsCount": "5",
-      "priceCount": "3",
+      "stars": "5",
+      "price": "3",
       "location": "South Korea",
       "id": 4
     },
     {
       "name": "Bill's Oysters",
-      "starsCount": "3",
-      "priceCount": "1",
+      "stars": "3",
+      "price": "1",
       "location": "Italy",
       "id": 5
+    },
+    {
+      "name": "Kim's Noodles",
+      "stars": "3",
+      "price": "1",
+      "location": "South Carolina",
+      "id": 6
+    },
+    {
+      "name": "Tony's Pizza",
+      "stars": "2",
+      "price": "1",
+      "location": "South Dakota",
+      "id": 7
+    },
+    {
+      "name": "Elmo's Fish n' Chips",
+      "stars": "5",
+      "price": "2",
+      "location": "Tennessee",
+      "id": 8
+    },
+    {
+      "name": "Joe's Burgers",
+      "stars": 3,
+      "price": 1,
+      "location": "Texas",
+      "id": 9
+    },
+    {
+      "name": "Ted's Fish Fry",
+      "stars": 5,
+      "price": 1,
+      "location": "Maine",
+      "id": 10
+    },
+    {
+      "name": "Ferb's Pretzels",
+      "stars": 4,
+      "price": 2,
+      "location": "Utah",
+      "id": 11
+    },
+    {
+      "name": "Candace's Coconuts",
+      "stars": 3,
+      "price": 1,
+      "location": "Hawaii",
+      "id": 12
     }
   ]
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {useNavigate} from "react-router-dom";
 
 const Create = () => {
     const [name, setName] = useState('');
@@ -6,10 +7,11 @@ const Create = () => {
     const [price, setPrice] = useState('1');
     const [location, setLocation] = useState('');
     const [isPending, setIsPending] = useState(false)
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const entry = {name, starsCount: stars, priceCount: price, location};
+        const entry = {name, stars, price, location};
 
         setIsPending(true);
         
@@ -20,6 +22,7 @@ const Create = () => {
         }).then(() => {
             console.log('New restaurant added');
             setIsPending(false);
+            navigate("/");
         })
     }
     
@@ -37,7 +40,7 @@ const Create = () => {
                 <label>Stars:</label>
                 <select
                     value={stars}
-                    onChange= {(e) => setStars(e.target.value)}
+                    onChange= {(e) => setStars(parseInt(e.target.value))}
                 >
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -48,7 +51,7 @@ const Create = () => {
                 <label>Price:</label>
                 <select
                     value={stars}
-                    onChange= {(e) => setPrice(e.target.value)}
+                    onChange= {(e) => setPrice(parseInt(e.target.value))}
                 >
                     <option value="1">1</option>
                     <option value="2">2</option>
