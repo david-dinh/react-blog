@@ -20,7 +20,6 @@ const Create = () => {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(entry)
         }).then(() => {
-            console.log('New restaurant added');
             setIsPending(false);
             navigate("/");
         })

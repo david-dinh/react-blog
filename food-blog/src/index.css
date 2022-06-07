@@ -53,6 +53,28 @@
   text-decoration: none;
 }
 
+/* blog details page */
+.entry-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.entry-details div {
+  margin: 20px 0;
+}
+.entry-details p {
+  padding: 4px 0px;
+}
+.entry-details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
 /* create new blog form */
 .create {
   max-width: 400px;
